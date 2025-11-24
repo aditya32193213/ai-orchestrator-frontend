@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import API from "../api/backend";
+import API from "../api/backend.js";
 
 function SummaryResult({ extractedData }) {
   const [email, setEmail] = useState("");
