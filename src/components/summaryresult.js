@@ -72,3 +72,8 @@ function SummaryResult({ extractedData }) {
 }
 
 export default SummaryResult;
+
+
+
+
+

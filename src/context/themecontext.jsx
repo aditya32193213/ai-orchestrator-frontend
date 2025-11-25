@@ -7,7 +7,6 @@ export const ThemeProvider = ({ children }) => {
     localStorage.getItem("theme") || "light"
   );
 
-  // Apply theme to <body> class
   useEffect(() => {
     document.body.className = theme === "dark" ? "bg-dark text-light" : "";
     localStorage.setItem("theme", theme);
