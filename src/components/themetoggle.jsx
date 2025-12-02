@@ -1,17 +1,16 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "../context/themecontext";
+import React from "react";
+import { useTheme } from "../context/themecontext";
 
-function ThemeToggle() {
-  const { theme, toggleTheme } = useContext(ThemeContext);
+export default function ThemeToggle() {
+  const { theme, toggle } = useTheme();
 
   return (
     <button
-      className="btn btn-secondary ms-3"
-      onClick={toggleTheme}
+      className={`btn ${theme === "dark" ? "btn-outline-light" : "btn-outline-secondary"}`}
+      onClick={toggle}
+      title="Toggle theme"
     >
-      {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+      {theme === "dark" ? "🌙 Dark" : "☀️ Light"}
     </button>
   );
 }
-
-export default ThemeToggle;
