@@ -133,8 +133,6 @@ PNG diagram included in screenshots section.
 
 # 📸 Screenshots
 
-> **Note:** Add PNG files in `/screenshots` folder with the same names.
-
 ### 📤 **Document Upload Screen**  
 ![Upload Document](./screenshots/upload.png)
 
