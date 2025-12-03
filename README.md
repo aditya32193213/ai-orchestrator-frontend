@@ -103,30 +103,71 @@ PNG diagram included in screenshots section.
 
 ---
 
+# 🗂️ Folder Structure
+
+```plaintext
+ai-orchestrator-frontend/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── api/
+│   │   └── backend.js
+│   │
+│   ├── components/
+│   │   └── themetoggle.jsx
+│   │
+│   ├── context/
+│   │   └── themecontext.jsx
+│   │
+│   ├── pages/
+│   │   ├── fileupload.jsx
+│   │   ├── notify.jsx
+│   │   └── summaryresult.jsx
+│   │
+│   ├── App.jsx
+│   └── index.js
+│
+├── screenshots/
+│   ├── upload.png
+│   ├── summary.png
+│   ├── email-editor.png
+│   └── n8n-workflow.png
+│
+├── .env                 # Local frontend env variables
+├── .gitignore
+├── package.json
+├── package-lock.json
+└── README.md
+```
+
+---
+
 # 🏗️ System Architecture Diagram
 
 ```plaintext
                   ┌───────────────────────────┐
-                  │        FRONTEND (React)    │
-                  │ Upload Doc | Email Editor  │
+                  │        FRONTEND (React)   │
+                  │ Upload Doc | Email Editor │
                   └───────────────┬───────────┘
                                   │
                                   ▼
                   ┌───────────────────────────┐
                   │   BACKEND (Node + Express)│
-                  │ PDF Parsing | Gemini Calls │
+                  │ PDF Parsing | Gemini Calls│
                   │ Sends Data → n8n Webhook  │
                   └───────────────┬───────────┘
                                   │
                                   ▼
                   ┌───────────────────────────┐
-                  │        n8n Workflow        │
+                  │        n8n Workflow       │
                   │ AI Draft → JS Parse → SMTP│
                   └───────────────┬───────────┘
                                   │
                                   ▼
                   ┌───────────────────────────┐
-                  │        Email Recipient     │
+                  │        Email Recipient    │
                   └───────────────────────────┘
 ```
 ---
