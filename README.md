@@ -1,37 +1,170 @@
-AI-Powered Document Orchestrator – Frontend (React)
+# 🚀 AI Document Orchestrator  
+_Transform PDFs & text files into summaries, structured data, and professional emails using AI._
 
-This is the React-based frontend for the AI-Powered Document Orchestrator, built as part of the MERN + n8n automation assignment.
-It allows users to upload PDF/TXT documents, ask analytical questions, send alert emails, and view structured AI insights.
+<p align="center">
+  <img src="https://img.shields.io/badge/React-18-blue?logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/TailwindCSS-3.0-38B2AC?logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Node.js-18-green?logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Express.js-Backend-black?logo=express&logoColor=white" />
+  <img src="https://img.shields.io/badge/Gemini AI-Powered-orange?logo=google" />
+  <img src="https://img.shields.io/badge/n8n-Automation-red?logo=n8n&logoColor=white" />
+  <img src="https://img.shields.io/badge/Status-Production Success-brightgreen" />
+</p>
+
+A full-stack AI automation system for businesses that want to extract insights from documents and automatically draft professional emails with **Gemini AI**, **Node.js**, **React**, and **n8n**.
+
+---
+
+# 🌐 Live Demo
+
+| Component | Link |
+|----------|------|
+| **Frontend (Vercel)** | https://ai-orchestrator-frontend.vercel.app |
+| **Backend API (Render)** | https://ai-orchestrator-backend-f0k6.onrender.com |
+
+---
+
+# ✨ Key Features
+
+## 📥 1. Document Upload & AI Summaries  
+- Upload **PDF or TXT** files  
+- Gemini AI generates:  
+  ✔ Clean summary  
+  ✔ Detailed answer  
+  ✔ Natural-language explanation  
+
+---
+
+## 🧠 2. Structured Data Extraction  
+Automatically extracts:  
+- Employee details  
+- Reference IDs  
+- Dates  
+- Organizations  
+- Academic details  
+- Invoice values  
+- And more (dynamic extraction)
+
+---
+
+## ✉️ 3. Smart Email Drafting (User-Aware Logic)  
+The system follows strict logic:
+
+| User Input | System Behavior |
+|------------|-----------------|
+| Custom Subject | Used **exactly as is** |
+| Custom Body | Used **exactly as is** |
+| Subject empty | AI generates a professional subject |
+| Body empty | AI drafts polished, natural email |
+| Always | Email field untouched |
+
+✔ ZERO rewriting of user text  
+✔ Fallback only when fields are empty  
+
+---
+
+## 📤 4. Email Delivery (SMTP)  
+- Real-time preview in UI  
+- n8n workflow automates sending  
+- Clear success/error response to frontend  
+
+---
+
+## 🤖 5. n8n Workflow Automation  
+A full automation pipeline:
 
 
-🌐 Live Demo
 
-Vercel Deployment: https://ai-orchestrator-frontend.vercel.app/
+PNG diagram included in screenshots section.
 
-🚀 Features
-✔ Document Upload
-Upload PDF or TXT files using a simple UI.
+---
 
-✔ Ask Analytical Questions
-Users can enter a custom query related to the uploaded document.
+# 🧩 Tech Stack
 
-✔ View 4 Key Outputs
-After processing, the UI displays:
+### **Frontend**
+- React.js  
+- TailwindCSS  
+- Axios  
+- React Router  
+- Vercel Hosting  
 
-1.Structured JSON Extracted by AI
-2.Final Analytical Answer (from n8n)
-3.Generated Email Body
-4.Email Automation Status
+### **Backend**
+- Node.js  
+- Express.js  
+- Gemini API  
+- pdf-parse  
+- Multer  
+- Render Hosting  
 
-✔ Email Alert Trigger/
-Users can enter a recipient email and trigger automation via a Send Alert Mail button.
+### **Automation**
+- n8n Cloud Workflow  
+- Webhooks  
+- SMTP  
 
-✔ Fully Integrated With Backend & n8n
-Frontend communicates with Node.js backend and an n8n webhook.
+---
 
-🏗️ Tech Stack
-React.js/
-Axios
-React Hooks
-Bootstrap
-Environment Variables (.env)
+# 🏗️ System Architecture Diagram
+
+```plaintext
+                  ┌───────────────────────────┐
+                  │        FRONTEND (React)    │
+                  │ Upload Doc | Email Editor  │
+                  └───────────────┬───────────┘
+                                  │
+                                  ▼
+                  ┌───────────────────────────┐
+                  │   BACKEND (Node + Express)│
+                  │ PDF Parsing | Gemini Calls │
+                  │ Sends Data → n8n Webhook  │
+                  └───────────────┬───────────┘
+                                  │
+                                  ▼
+                  ┌───────────────────────────┐
+                  │        n8n Workflow        │
+                  │ AI Draft → JS Parse → SMTP│
+                  └───────────────┬───────────┘
+                                  │
+                                  ▼
+                  ┌───────────────────────────┐
+                  │        Email Recipient     │
+                  └───────────────────────────┘
+
+---
+
+# 📸 Screenshots
+
+> **Note:** Add PNG files in `/screenshots` folder with the same names.
+
+### 📤 **Document Upload Screen**  
+![Upload Document](./screenshots/upload.png)
+
+---
+
+### 📊 **Summary + Structured Data**  
+![Summary Page](./screenshots/summary.png)
+
+---
+
+### ✉️ **Email Editor + AI Response**  
+![Email Editor](./screenshots/email-editor.png)
+
+---
+
+### 🤖 **n8n Workflow Diagram**  
+![Workflow](./screenshots/n8n-workflow.png)
+
+---
+
+# ⚙️ Installation
+
+## 🔽 Clone Repositories
+
+### Frontend:
+
+
+```bash
+git clone https://github.com/aditya32193213/ai-orchestrator-frontend.git
+cd ai-orchestrator-frontend
+npm install
+npm start
+
