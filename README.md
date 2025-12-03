@@ -153,6 +153,17 @@ PNG diagram included in screenshots section.
 
 ---
 
+### 🧑‍💻 Author
+
+Aditya Full Stack Developer GitHub: https://github.com/aditya32193213
+
+---
+
+### ⭐ Support
+
+---
+
+If you like this project, please ⭐ star the repository. Your support helps me grow as a developer ✨
 # ⚙️ Installation
 
 ## 🔽 Clone Repositories
@@ -165,4 +176,6 @@ git clone https://github.com/aditya32193213/ai-orchestrator-frontend.git
 cd ai-orchestrator-frontend
 npm install
 npm start
+```
+
 
