@@ -107,7 +107,7 @@ export default function SummaryResult() {
     if (!r) return null;
     return (
       <div className="mt-4 p-3 border rounded bg-light">
-        <h5 className="fw-bold mb-3">n8n Email Response</h5>
+        <h5 className="fw-bold mb-3">Email Response</h5>
 
         {r.status && <p><strong>Status:</strong> {r.status}</p>}
         {r.message && <p><strong>Message:</strong> {r.message}</p>}
@@ -233,7 +233,7 @@ export default function SummaryResult() {
 
       <div className="d-flex gap-2 mt-3">
         <button className="btn btn-success" disabled={loading} onClick={sendEmail}>
-          {loading ? "Sending..." : "Send Summary via n8n"}
+          {loading ? "Sending..." : "Send Alert Mail"}
         </button>
 
         <button className="btn btn-outline-secondary" onClick={() => navigate("/")}>

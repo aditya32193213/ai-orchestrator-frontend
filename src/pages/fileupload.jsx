@@ -38,7 +38,7 @@ export default function FileUpload() {
 
       const payload = res.data || {};
 
-      // Normalize and save extracted data
+      
       const parsed = {
         fullParsed: {
           summary: payload.summary,
@@ -66,16 +66,16 @@ export default function FileUpload() {
       className="card p-4 shadow-sm mt-4"
       style={{ maxWidth: "600px", margin: "0 auto" }}
     >
-      {/* PAGE TITLE */}
+      
       <h2 className="fw-bold mb-2 text-center">Upload Document</h2>
       <p className="text-muted text-center mb-4">
         Upload a PDF or text file to extract and summarize it using Gemini AI.
       </p>
 
-      {/* FORM */}
+      
       <form onSubmit={handleSubmit}>
 
-        {/* FILE INPUT */}
+        
         <div className="mb-3">
           <label className="form-label fw-semibold">Choose File</label>
           <input
@@ -86,7 +86,7 @@ export default function FileUpload() {
           />
         </div>
 
-        {/* QUESTION INPUT */}
+        
         <div className="mb-3">
           <label className="form-label fw-semibold">Question / Prompt</label>
           <input
@@ -97,12 +97,12 @@ export default function FileUpload() {
           />
         </div>
 
-        {/* ERROR MESSAGE */}
+        
         {error && (
           <div className="alert alert-danger mt-2">{error}</div>
         )}
 
-        {/* SUBMIT BUTTON */}
+        
         <button
           className="btn btn-primary w-100 mt-3"
           disabled={loading}
